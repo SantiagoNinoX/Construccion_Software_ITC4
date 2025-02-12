@@ -23,8 +23,39 @@
     <div class="nombre">
         <h1>Cat Cafe: Los Michis</h1>
     </div>
+    <button type="button" class="dark" onclick="funcionDark()">Activar el dark mode</button>
     <div class="menu">
         <h2>Menú</h2>
+        <form>
+            <legend>¿Qué día nos visitarás?</legend>
+            <label>
+                <input type="radio" name="dias" onclick="menuLunes()">
+                Lunes
+            </label>
+            <label>
+                <input type="radio" name="dias" onclick="menuMartes()">
+                Martes
+            </label>
+            <label>
+                <input type="radio" name="dias" onclick="menuMiercoles()">
+                Miercoles
+            </label>
+            <label>
+                <input type="radio" name="dias" onclick="menuJueves()">
+                Jueves
+            </label>
+            <label>
+                <input type="radio" name="dias" onclick="menuViernes()">
+                Viernes
+            </label>
+            <label>
+                <input type="radio" name="dias" onclick="menuSabado()">
+                Sabado
+            </label>
+        </form>
+        <span>Menú del día: </span>
+        <p id="infomenu"></p>
+        <span>Los platillos disponibles todos los días a cualquier hora son: </span>
         <ol>
             <li>Hamburguesa --- $120</li>
             <li>Hot dogs ------ $45</li>
@@ -38,7 +69,10 @@
         <ul>
             <li>Nacho</li>
             <img src="https://img.freepik.com/foto-gratis/retrato-gato-hermoso-cerca_23-2149214419.jpg" alt="El es Nacho" width="300" height="200">
-            <p>El es Nacho, un gato blanco, muy amable y cariñoso</p>
+            <button type="button" class="infoCat" onclick="infoNacho()">¡Conoce a Nacho!</button>
+            <br>
+            <p id="espacioNacho"></p>
+            <!-- <p>El es Nacho, un gato blanco, muy amable y cariñoso</p> -->
             <li>Gabo</li>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmDZfCnn3LqK46xmjVsuWSy37NTWCJ2znd5Q&s" alt="El es Gabo" width="300" height="200">
             <p>El es Gabriel, un gato naranja muy violento e inteligente</p>
@@ -66,6 +100,16 @@
         <img id="id2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Cat_Eyes.jpg/220px-Cat_Eyes.jpg" alt="Gato blanco" width="300" height="200">
         <button type="button" onclick="miFuncion()" style="margin-bottom: 30px;">Otra foto</button>
     </div>
+    <p id="id3">
+        Vamos a meter codigo JS
+        <script>
+            console.log("desplego correctamente el div")
+            for(let i = 0; i < 10; i++){
+                document.write(i);
+            }
+
+        </script>
+    </p>
     <p style="text-align: end;">Elaborado por: Santiago Niño</p>
 </body>
 </html>

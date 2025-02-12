@@ -41,3 +41,8 @@ div {
     font-weight: 400;
     font: bolder;
 }
+
+.dark {
+    background-color: grey;
+    color: whitesmoke;
+}
