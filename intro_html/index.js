@@ -18,5 +18,5 @@ function miFuncion() {
 
  function menuLunes(){
    console.log("Mostrando el menu del Lunes");
-   document.getElementById("infomenu").innerText="Sopa de letras, carne al pastor y cheesecake de frambuesa";
+   document.getElementById("infomenu").innerText="Sopa de letras, carne al pastor y un cheesecake de frambuesa";
  }
