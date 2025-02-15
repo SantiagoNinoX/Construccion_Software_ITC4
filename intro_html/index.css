@@ -1,26 +1,63 @@
+body {
+    background-color: azure;
+    color: black;
+}
+
 .nombre {
-    background-color: aqua;
+    background: linear-gradient(to right, aqua, lightcyan);
     color: black;
     text-align: center;
-    font: bold;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-family: Georgia,'Times New Roman', Times, serif;
+    font-size: 3rem; 
+    padding-top: 0.05px;
+    border-radius: 30px; 
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    transition: transform 0.2s ease-in-out; 
+}
+
+.nombre:hover {
+    transform: scale(1.1);
+}
+
+.dark {
+    background-color: grey;
+    color: whitesmoke;
+}
+
+.container {
+    display: flex; /* Activa el diseño flexible */
+    align-items: center; /* Alinea verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    gap: 20px; /* Espacio entre los elementos */
+    background-color:#109dfa;
+    padding: 1rem;
 }
 
 .menu {
     background-color: yellow;
     color: black;
     text-align: justify;
+    font-family: Arial, Georgia;
+    text-indent: 10px;
+    padding: 2rem;
+    border-top-right-radius: 40%;
+    border-bottom-left-radius: 20%;
+    width: 800px;
+    border: solid brown 5px;
 }
 
 div {    
-    background: black;
-    color: white; 
+    background: #E69DFB;
+    color: black; 
     text-align: end;
 }
 
 .c1 {
-    background: greenyellow;
+    background: aquamarine;
     color: blueviolet;
+    text-indent: 10px;
     border-style: dotted;
     margin-top: 100px;
     margin-bottom: 150px;
@@ -31,7 +68,7 @@ div {
 }
 
 #id1 {
-    background: darkblue;
+    background: rgb(69, 131, 255);
     color: red;
     text-align: center;
     margin-top: 50px;
@@ -42,7 +79,20 @@ div {
     font: bolder;
 }
 
-.dark {
-    background-color: grey;
-    color: whitesmoke;
+#descripcion {
+    background-color: #86cefa;
+    color: yellow;
+    text-decoration: solid;
+    text-align: center;
+    text-decoration-line: underline;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: large;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-family: Courier;
+    font-weight: bold;
+    padding: 1rem;
+    width: 500px;
+    margin-left: 30%;
 }

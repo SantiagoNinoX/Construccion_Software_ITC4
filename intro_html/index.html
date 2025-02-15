@@ -24,65 +24,78 @@
         <h1>Cat Cafe: Los Michis</h1>
     </div>
     <button type="button" class="dark" onclick="funcionDark()">Activar el dark mode</button>
-    <div class="menu">
-        <h2>Menú</h2>
-        <form>
-            <legend>¿Qué día nos visitarás?</legend>
-            <label>
-                <input type="radio" name="dias" onclick="menuLunes()">
-                Lunes
-            </label>
-            <label>
-                <input type="radio" name="dias" onclick="menuMartes()">
-                Martes
-            </label>
-            <label>
-                <input type="radio" name="dias" onclick="menuMiercoles()">
-                Miercoles
-            </label>
-            <label>
-                <input type="radio" name="dias" onclick="menuJueves()">
-                Jueves
-            </label>
-            <label>
-                <input type="radio" name="dias" onclick="menuViernes()">
-                Viernes
-            </label>
-            <label>
-                <input type="radio" name="dias" onclick="menuSabado()">
-                Sabado
-            </label>
-        </form>
-        <span>Menú del día: </span>
-        <p id="infomenu"></p>
-        <span>Los platillos disponibles todos los días a cualquier hora son: </span>
-        <ol>
-            <li>Hamburguesa --- $120</li>
-            <li>Hot dogs ------ $45</li>
-            <li>Hot cakes ----- $60</li>
-            <li>Sandwich ------ $40</li>
-            <li>Café ---------- $25</li>
-        </ol>
+    <div id="descripcion">
+        <p>"Los Michis" es un Cat Café; es decir, una cafetería en la que podrás convivir
+            e interactuar con estos divertidos felinos mientras degustas de unos maravillosos platillos. </p>
+        <p> ¡Anímate a vivir la experiencia! Te esperamos pronto. </p>
+        
+    </div>
+    <div class="container">
+        <div class="menu">
+            <h2>Menú</h2>
+            <form>
+                <legend>¿Qué día nos visitarás?</legend>
+                <label>
+                    <input type="radio" name="dias" onclick="menus('lunes')">
+                    Lunes
+                </label>
+                <label>
+                    <input type="radio" name="dias" onclick="menus('martes')">
+                    Martes
+                </label>
+                <label>
+                    <input type="radio" name="dias" onclick="menus('miercoles')">
+                    Miercoles
+                </label>
+                <label>
+                    <input type="radio" name="dias" onclick="menus('jueves')">
+                    Jueves
+                </label>
+                <label>
+                    <input type="radio" name="dias" onclick="menus('viernes')">
+                    Viernes
+                </label>
+                <label>
+                    <input type="radio" name="dias" onclick="menus('sabado')">
+                    Sabado
+                </label>
+            </form>
+            <p>Menú del día: </p>
+            <p id="infomenu"></p>
+            <p>Los platillos disponibles todos los días a cualquier hora son: </p>
+            <ol>
+                <li>Hamburguesa --- $120</li>
+                <li>Hot dogs ------ $45</li>
+                <li>Hot cakes ----- $60</li>
+                <li>Sandwich ------ $40</li>
+                <li>Café ---------- $25</li>
+            </ol>
+        </div>
+        <img src="https://images.squarespace-cdn.com/content/v1/59014ed8db29d637250fa476/1506798703877-DZ64MSMJEPT91MKR124C/IMG_7487.JPG?format=1500w" alt="Nuestro negocio" width="500" height="300">
     </div>
     <div class="c1">
         <h3>Conoce a nuestros gatos ...</h3>
         <ul>
             <li>Nacho</li>
             <img src="https://img.freepik.com/foto-gratis/retrato-gato-hermoso-cerca_23-2149214419.jpg" alt="El es Nacho" width="300" height="200">
-            <button type="button" class="infoCat" onclick="infoNacho()">¡Conoce a Nacho!</button>
+            <button type="button" class="infoCat" onclick="infoGatos('nacho')">¡Conoce a Nacho!</button>
             <br>
             <p id="espacioNacho"></p>
-            <!-- <p>El es Nacho, un gato blanco, muy amable y cariñoso</p> -->
             <li>Gabo</li>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmDZfCnn3LqK46xmjVsuWSy37NTWCJ2znd5Q&s" alt="El es Gabo" width="300" height="200">
-            <p>El es Gabriel, un gato naranja muy violento e inteligente</p>
+            <button type="button" class="infoCat" onclick="infoGatos('gabo')">¡Conoce a Gabo!</button>
+            <br>
+            <p id="espacioGabo"></p>
             <li>Omar</li>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJy0fmkDHSWuzpng7qryDCkMAjxpmTUnXPQQ&s" alt="El es Omar" width="300" height="200">
-            <p>El es Omar, un gato negro muy tenebroso y kawai</p>
+            <button type="button" class="infoCat" onclick="infoGatos('omar')">¡Conoce a Omar!</button>
+            <br>
+            <p id="espacioOmar"></p>
         </ul>
     </div>
     <div>
         <p>Dirección: Av. de los Insurgentes Sur 1457, Insurgentes Mixcoac, Benito Juárez, 03920 Ciudad de México, CDMX</p>
+        <p><a href="https://maps.app.goo.gl/KweQBSzAviJy3SYz9" target="_blank">Ubicación</a></p>
         <p>Horario: </p>
         <ul>
             <li>Lunes-Jueves: 10 am - 18 pm</li>
@@ -91,7 +104,7 @@
         </ul>
     </div>
     <div id="id1">
-        <h3>Mapa: </h3>
+        <h2>Mapa: </h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d7528.056343992488!2d-99.1766772!3d19.3679328!3m2!1i1024!2i768!4f13.1!2m1!1splaza%20manacar!5e0!3m2!1ses-419!2smx!4v1739209736005!5m2!1ses-419!2smx" 
         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <br>
@@ -107,9 +120,9 @@
             for(let i = 0; i < 10; i++){
                 document.write(i);
             }
-
         </script>
     </p>
+    <button type="button" onclick="gatitoAscii()">Clic para ver un gatito (ASCII art) en consola</button>
     <p style="text-align: end;">Elaborado por: Santiago Niño</p>
 </body>
 </html>
