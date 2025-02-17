@@ -60,7 +60,7 @@
                     Sabado
                 </label>
             </form>
-            <p>Menú del día: </p>
+            <p>Menú del día: $100</p>
             <p id="infomenu"></p>
             <p>Los platillos disponibles todos los días a cualquier hora son: </p>
             <ol>
@@ -76,24 +76,30 @@
     <div class="c1">
         <h3>Conoce a nuestros gatos ...</h3>
         <ul>
-            <li>Nacho</li>
-            <img src="https://img.freepik.com/foto-gratis/retrato-gato-hermoso-cerca_23-2149214419.jpg" alt="El es Nacho" width="300" height="200">
-            <button type="button" class="infoCat" onclick="infoGatos('nacho')">¡Conoce a Nacho!</button>
-            <br>
-            <p id="espacioNacho"></p>
-            <li>Gabo</li>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmDZfCnn3LqK46xmjVsuWSy37NTWCJ2znd5Q&s" alt="El es Gabo" width="300" height="200">
-            <button type="button" class="infoCat" onclick="infoGatos('gabo')">¡Conoce a Gabo!</button>
-            <br>
-            <p id="espacioGabo"></p>
-            <li>Omar</li>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJy0fmkDHSWuzpng7qryDCkMAjxpmTUnXPQQ&s" alt="El es Omar" width="300" height="200">
-            <button type="button" class="infoCat" onclick="infoGatos('omar')">¡Conoce a Omar!</button>
-            <br>
-            <p id="espacioOmar"></p>
+            <div style="margin-left: 0%;">
+                <li>Nacho</li>
+                <img src="https://img.freepik.com/foto-gratis/retrato-gato-hermoso-cerca_23-2149214419.jpg" alt="El es Nacho" width="300" height="200">
+                <button type="button" class="infoCat" onclick="infoGatos('nacho')">¡Conoce a Nacho!</button>
+                <br>
+                <p id="espacioNacho"></p>
+            </div>
+            <div style="margin-left: 30%;">
+                <li>Gabo</li>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmDZfCnn3LqK46xmjVsuWSy37NTWCJ2znd5Q&s" alt="El es Gabo" width="300" height="200">
+                <button type="button" class="infoCat" onclick="infoGatos('gabo')">¡Conoce a Gabo!</button>
+                <br>
+                <p id="espacioGabo"></p>
+            </div>
+            <div style="margin-left: 65%;">
+                <li>Omar</li>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJy0fmkDHSWuzpng7qryDCkMAjxpmTUnXPQQ&s" alt="El es Omar" width="300" height="200">
+                <button type="button" class="infoCat" onclick="infoGatos('omar')">¡Conoce a Omar!</button>
+                <br>
+                <p id="espacioOmar"></p>
+            </div>
         </ul>
     </div>
-    <div>
+    <div class="ubiYhora">
         <p>Dirección: Av. de los Insurgentes Sur 1457, Insurgentes Mixcoac, Benito Juárez, 03920 Ciudad de México, CDMX</p>
         <p><a href="https://maps.app.goo.gl/KweQBSzAviJy3SYz9" target="_blank">Ubicación</a></p>
         <p>Horario: </p>
@@ -111,7 +117,7 @@
         <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/5jc8cS2IXZA?si=FiMcTh1yNF1cU5bd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
         <img id="id2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Cat_Eyes.jpg/220px-Cat_Eyes.jpg" alt="Gato blanco" width="300" height="200">
-        <button type="button" onclick="miFuncion()" style="margin-bottom: 30px;">Otra foto</button>
+        <button type="button" onclick="miFuncion()" style="margin-bottom: 30px;" class="infoCat">Otra foto</button>
     </div>
     <p id="id3">
         Vamos a meter codigo JS
@@ -122,7 +128,7 @@
             }
         </script>
     </p>
-    <button type="button" onclick="gatitoAscii()">Clic para ver un gatito (ASCII art) en consola</button>
+    <button type="button" class="infoCat" onclick="gatitoAscii()">Clic para ver un gatito (ASCII art) en consola</button>
     <p style="text-align: end;">Elaborado por: Santiago Niño</p>
 </body>
 </html>

@@ -1,14 +1,35 @@
 function miFuncion() {
     document.getElementById("id2").src="https://upload.wikimedia.org/wikipedia/commons/9/94/Gato_%282%29_REFON.jpg";
-    document.getElementsByClassName("c1")[0].style.background = "darkblue";
-    document.getElementsByClassName("c1")[0].style.color = "green";
+   //  document.getElementsByClassName("c1")[0].style.background = "darkblue";
+   //  document.getElementsByClassName("c1")[0].style.color = "green";
     console.log("Todo va bien");
  }
 
  function funcionDark(){
     console.log("Dark mode activado");
-    document.getElementsByClassName("nombre")[0].style.background = "blue";
+    let divs = document.querySelectorAll("div");
+    document.body.style.backgroundColor = "#1B4F72";
+    document.body.style.color = "white"; 
+    document.getElementsByClassName("nombre")[0].style.background = "linear-gradient(to right, darkcyan, blue)";
     document.getElementsByClassName("nombre")[0].style.color = "white";
+    document.getElementById("descripcion").style.background = "steelblue";
+    document.getElementById("descripcion").style.color = "orange";
+    document.getElementsByClassName("container")[0].style.background = "royalblue";
+    let menu = document.querySelector(".menu");   //Una alternativa, usar queryselector y no el [0]. Funciona.
+    menu.style.backgroundColor = "#7d6608";
+    menu.style.color = "white";
+    document.getElementsByClassName("c1")[0].style.background = "rgb(95,158,160)";
+    document.getElementsByClassName("c1")[0].style.color = "#FFCCFF";
+    document.getElementById("id1").style.background = "#01263a";
+    document.getElementById("id1").style.color = "#ffabaf";
+    document.getElementsByClassName("ubiYhora")[0].style.background = "#993366";
+    document.getElementsByClassName("ubiYhora")[0].style.color = "white";
+    let botonesGatos = document.querySelectorAll(".infoCat");
+    botonesGatos.forEach(boton => {
+        boton.style.backgroundColor = "grey";
+        boton.style.color = "whitesmoke"; 
+        boton.style.border = "1px solid white"; 
+    });
  }
 
  function infoGatos(gato){
