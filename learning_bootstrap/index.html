@@ -6,17 +6,19 @@
     <title>Cat Cafe con Bootstrap</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="index.js"></script>
 </head>
 <body>
     <div class="container-fluid">
         <div class="row p-2">
-            <div class="col-sm-12 mt-4 p-5 bg-primary text-success rounded">
+            <div class="col-sm-12 mt-4 p-5 bg-primary text-warning rounded">
                 <h1>Cat Cafe: Los Michis</h1>
             </div>
         </div>
         <button type="button" onclick="funcionDark()">Activar el dark mode</button>
         <div class="row p-2">
-            <div class="col-sm-12 text-center">
+            <div class="col-sm-12 text-center bg-success">
                 <p>"Los Michis" es un Cat Café; es decir, una cafetería en la que podrás convivir
                 e interactuar con estos divertidos felinos mientras degustas de unos maravillosos platillos. </p>
                 <p> ¡Anímate a vivir la experiencia! Te esperamos pronto. </p>
@@ -53,9 +55,12 @@
                     </label>
                 </form>
                 <p>Menú del día: $100</p>
-                <p></p>
+                <p id="infomenu">
+
+                </p>
                 <p>Los platillos disponibles todos los días a cualquier hora son: </p>
-                <ol>
+                <button id="botonSlide">Desplegar menú</button>
+                <ol id="listaMenu">
                     <li>Hamburguesa --- $120</li>
                     <li>Hot dogs ------ $45</li>
                     <li>Hot cakes ----- $60</li>
@@ -69,41 +74,41 @@
         </div>
         <div class="row p-2">
             <h3>Conoce a nuestros gatos ...</h3>
-            <div class="col-sm-6">
+            <div class="col-sm-6 bg-primary">
                 <h4>- Nacho</h4>
-                <img src="https://img.freepik.com/foto-gratis/retrato-gato-hermoso-cerca_23-2149214419.jpg" alt="El es Nacho">
-                <button type="button" onclick="infoGatos('nacho')">¡Conoce a Nacho!</button>
+                <img id="fotoNacho" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7Rsfl6dIGPbojoNrUPdja0WjgGk8ESACRZg&s" alt="El es Nacho">
+                <button type="button" onclick="infoGatos('nacho')">+ de Nacho</button>
             </div>
-            <div class="col-sm-6">
-                <p>El es Nacho, un gato blanco, muy amable y cariñoso.</p>
+            <div class="col-sm-6 bg-info">
+                <p id="infoNacho">El es Nacho, un gato blanco, muy amable y cariñoso.</p>
             </div>
         </div>
         <div class="row p-2">
-            <div class="col-sm-6">
+            <div class="col-sm-6 bg-danger">
                 <h4>- Gabo</h4>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmDZfCnn3LqK46xmjVsuWSy37NTWCJ2znd5Q&s" alt="El es Gabo">
-                <button type="button" onclick="infoGatos('gabo')">¡Conoce a Gabo!</button>
+                <img id="fotoGabo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmDZfCnn3LqK46xmjVsuWSy37NTWCJ2znd5Q&s" alt="El es Gabo" id="fotoGabo">
+                <button type="button" onclick="infoGatos('gabo')">+ de Gabo</button>
             </div>
-            <div class="col-sm-6">
-                <p>El es Gabriel, un gato naranja muy violento e inteligente.</p>
+            <div class="col-sm-6 bg-warning">
+                <p id="infoGabo">El es Gabriel, un gato naranja muy violento e inteligente.</p>
             </div>
         </div>
         <div class="row p-2">
-            <div class="col-sm-6">
+            <div class="col-sm-6 bg-success">
                 <h4>- Omar</h4>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJy0fmkDHSWuzpng7qryDCkMAjxpmTUnXPQQ&s" alt="El es Omar">
-                <button type="button" onclick="infoGatos('omar')">¡Conoce a Omar!</button>
+                <img id="fotoOmar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJy0fmkDHSWuzpng7qryDCkMAjxpmTUnXPQQ&s" alt="El es Omar" id="fotoOmar">
+                <button type="button" onclick="infoGatos('omar')">+ de Omar</button>
             </div>
-            <div class="col-sm-6">
-                <p>El es Omar, un gato negro muy tenebroso y kawai.</p>
+            <div class="col-sm-6 bg-secondary">
+                <p id="infoOmar">El es Omar, un gato negro muy tenebroso y kawai.</p>
             </div>
         </div>
         <div class="row p-2">
-            <div class="col-sm-6">
+            <div class="col-sm-7 bg-info">
                 <p>Dirección: Av. de los Insurgentes Sur 1457, Insurgentes Mixcoac, Benito Juárez, 03920 Ciudad de México, CDMX</p>
                 <p><a href="https://maps.app.goo.gl/KweQBSzAviJy3SYz9" target="_blank">Ubicación</a></p>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-5 bg-danger">
                 <p>Horario: </p>
                 <ul>
                     <li>Lunes-Jueves: 10 am - 18 pm</li>
@@ -113,14 +118,10 @@
             </div>
         </div>
         <div class="row p-2">
-            <div class="col-md-9">
+            <div class="col-md-12 text-center">
                 <h2>Mapa: </h2>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d7528.056343992488!2d-99.1766772!3d19.3679328!3m2!1i1024!2i768!4f13.1!2m1!1splaza%20manacar!5e0!3m2!1ses-419!2smx!4v1739209736005!5m2!1ses-419!2smx" 
+                <iframe id="maps" src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d7528.056343992488!2d-99.1766772!3d19.3679328!3m2!1i1024!2i768!4f13.1!2m1!1splaza%20manacar!5e0!3m2!1ses-419!2smx!4v1739209736005!5m2!1ses-419!2smx" 
                 height="400" width="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div class="col-md-3">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Cat_Eyes.jpg/220px-Cat_Eyes.jpg" alt="Gato blanco" width="300" height="200">
-                <button type="button" onclick="miFuncion()">Otra foto</button>
             </div>
         </div>
         <div class="row p-3">
