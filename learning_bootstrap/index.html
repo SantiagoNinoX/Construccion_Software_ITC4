@@ -18,7 +18,7 @@
         </div>
         <button type="button" onclick="funcionDark()">Activar el dark mode</button>
         <div class="row p-2">
-            <div class="col-sm-12 text-center bg-success">
+            <div class="col-sm-12 text-center bg-success text-white">
                 <p>"Los Michis" es un Cat Café; es decir, una cafetería en la que podrás convivir
                 e interactuar con estos divertidos felinos mientras degustas de unos maravillosos platillos. </p>
                 <p> ¡Anímate a vivir la experiencia! Te esperamos pronto. </p>
@@ -55,18 +55,10 @@
                     </label>
                 </form>
                 <p>Menú del día: $100</p>
-                <p id="infomenu">
-
-                </p>
+                <p id="infomenu"></p>
                 <p>Los platillos disponibles todos los días a cualquier hora son: </p>
                 <button id="botonSlide">Desplegar menú</button>
-                <ol id="listaMenu">
-                    <li>Hamburguesa --- $120</li>
-                    <li>Hot dogs ------ $45</li>
-                    <li>Hot cakes ----- $60</li>
-                    <li>Sandwich ------ $40</li>
-                    <li>Café ---------- $25</li>
-                </ol>
+                <p id="resultadomenu"></p>
             </div>
             <div class="col-md-4">
                 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/b871cf23885159.5632a6c404d21.jpg" alt="Nuestro negocio">
@@ -77,7 +69,7 @@
             <div class="col-sm-6 bg-primary">
                 <h4>- Nacho</h4>
                 <img id="fotoNacho" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7Rsfl6dIGPbojoNrUPdja0WjgGk8ESACRZg&s" alt="El es Nacho">
-                <button type="button" onclick="infoGatos('nacho')">+ de Nacho</button>
+                <button type="button" onclick="infoGatos('nacho')" id="botonNacho">Otra foto de Nacho</button>
             </div>
             <div class="col-sm-6 bg-info">
                 <p id="infoNacho">El es Nacho, un gato blanco, muy amable y cariñoso.</p>

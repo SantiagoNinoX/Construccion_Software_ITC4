@@ -15,8 +15,22 @@ $(document).ready(function(){
     $("#maps").mouseleave(function(){
         $("#maps").hide();
     });
+    // $("#botonSlide").click(function(){
+    //     $("#listaMenu").slideDown();
+    // });
     $("#botonSlide").click(function(){
-        $("#listaMenu").slideDown();
+        $.get("http://127.0.0.1:5000/hi", function(data, status){
+            $("#resultadomenu").html(data);
+            alert("Acaba de cargar el menu. Status: " + status);
+        });
+    });
+    $("#botonNacho").click(function(){
+        $.get("http://127.0.0.1:5000/cambiaNacho", function(data, status){
+            $("#fotoNacho").attr("src", data);
+            $("#fotoNacho").attr("height", 225);
+            $("#fotoNacho").attr("width", 225);
+            alert("Acaba de cambiar la foto de Nacho. Status: " + status);
+        });
     });
 });
 
