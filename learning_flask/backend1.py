@@ -10,11 +10,11 @@ def main():
 
 @app.route("/hola")
 def hello_world():
-    return "Hello, Wold!"
+    return "Hello, Wold!",200
 
 @app.route("/adios")
 def bye_world():
-    return "Bye!"
+    return "Bye!",200
 
 @app.route("/json")
 def json_endpoint():
