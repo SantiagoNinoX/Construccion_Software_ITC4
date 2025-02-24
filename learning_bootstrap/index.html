@@ -12,7 +12,7 @@
 <body>
     <div class="container-fluid">
         <div class="row p-2">
-            <div class="col-sm-12 mt-4 p-5 bg-primary text-warning rounded">
+            <div class="col-sm-12 mt-4 p-5 bg-primary text-warning text-center rounded">
                 <h1>Cat Cafe: Los Michis</h1>
             </div>
         </div>
@@ -30,27 +30,27 @@
                 <form>
                     <legend>¿Qué día nos visitarás?</legend>
                     <label>
-                        <input type="radio" name="dias" onclick="menus('lunes')">
+                        <input type="radio" name="dias" id="botonLunes">
                         Lunes
                     </label>
                     <label>
-                        <input type="radio" name="dias" onclick="menus('martes')">
+                        <input type="radio" name="dias" id="botonMartes">
                         Martes
                     </label>
                     <label>
-                        <input type="radio" name="dias" onclick="menus('miercoles')">
+                        <input type="radio" name="dias" id="botonMiercoles">
                         Miercoles
                     </label>
                     <label>
-                        <input type="radio" name="dias" onclick="menus('jueves')">
+                        <input type="radio" name="dias" id="botonJueves">
                         Jueves
                     </label>
                     <label>
-                        <input type="radio" name="dias" onclick="menus('viernes')">
+                        <input type="radio" name="dias" id="botonViernes">
                         Viernes
                     </label>
                     <label>
-                        <input type="radio" name="dias" onclick="menus('sabado')">
+                        <input type="radio" name="dias" id="botonSabado">
                         Sabado
                     </label>
                 </form>
@@ -58,13 +58,14 @@
                 <p id="infomenu"></p>
                 <p>Los platillos disponibles todos los días a cualquier hora son: </p>
                 <button id="botonSlide">Desplegar menú</button>
+                <button id="hideMenu">Ocultar menú</button>
                 <p id="resultadomenu"></p>
             </div>
             <div class="col-md-4">
                 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/b871cf23885159.5632a6c404d21.jpg" alt="Nuestro negocio">
             </div>
         </div>
-        <div class="row p-2">
+        <div class="row pt-5 px-5">
             <h3>Conoce a nuestros gatos ...</h3>
             <div class="col-sm-6 bg-primary">
                 <h4>- Nacho</h4>
@@ -75,21 +76,21 @@
                 <p id="infoNacho">El es Nacho, un gato blanco, muy amable y cariñoso.</p>
             </div>
         </div>
-        <div class="row p-2">
+        <div class="row px-5">
             <div class="col-sm-6 bg-danger">
                 <h4>- Gabo</h4>
                 <img id="fotoGabo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmDZfCnn3LqK46xmjVsuWSy37NTWCJ2znd5Q&s" alt="El es Gabo" id="fotoGabo">
-                <button type="button" onclick="infoGatos('gabo')">+ de Gabo</button>
+                <button type="button" onclick="infoGatos('gabo')" id="botonGabo">Otra foto de Gabo</button>
             </div>
             <div class="col-sm-6 bg-warning">
                 <p id="infoGabo">El es Gabriel, un gato naranja muy violento e inteligente.</p>
             </div>
         </div>
-        <div class="row p-2">
+        <div class="row px-5 pb-5">
             <div class="col-sm-6 bg-success">
                 <h4>- Omar</h4>
                 <img id="fotoOmar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJy0fmkDHSWuzpng7qryDCkMAjxpmTUnXPQQ&s" alt="El es Omar" id="fotoOmar">
-                <button type="button" onclick="infoGatos('omar')">+ de Omar</button>
+                <button type="button" onclick="infoGatos('omar')" id="botonOmar">Otra foto de Omar</button>
             </div>
             <div class="col-sm-6 bg-secondary">
                 <p id="infoOmar">El es Omar, un gato negro muy tenebroso y kawai.</p>
