@@ -26,12 +26,25 @@
                 y = temp + y;
             }
         }
-    
+        
+        function arbol(x){
+            for (let i = 0; i < x; i++){
+                let espacio = " ";
+                let asterisco = "*";
+                for (let j = 0; j < (x - i)-1; j++){
+                    espacio += " ";
+                }
+                for(let k = 0; k < (2*i)+1; k++){
+                    asterisco += "*";
+                }
+                console.log(espacio + asterisco + espacio);
+            }
+        }
     </script>
 </head>
 <body>
     <button type="button" onclick="fibonacci()">Serie de Fibonacci</button>
     <button type="button" onclick="aureo()">Numero Aureo</button>
-    <button type="button" onclick="arbol()">Arbolito</button>
+    <button type="button" onclick="arbol(10)">Arbolito</button>
 </body>
 </html>

@@ -35,3 +35,12 @@ def division():
     sNumber = int(request.form["second"])
     resultado = fNumber / sNumber
     return str(resultado)
+
+@app.route("/login", methods=["POST"])
+def inicioSesion():
+    usr = request.form["username"]
+    ps = request.form["password"]
+    if usr == "admin" and ps == "1234":
+        return "Bienvenido admin"
+    else:
+        return "Usuario o contraseña incorrectos"

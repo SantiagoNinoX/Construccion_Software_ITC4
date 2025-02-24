@@ -43,4 +43,13 @@ $(document).ready(function() {
             $("#result").text(data);
         });
     });
+    $("#login").click(function() {
+        let username = $("#username").val();
+        let password = $("#password").val();
+        valores = {"username": username, "password": password};
+        $.post("http://127.0.0.1:5000/login", valores, function(data, status){
+            alert("Inicio de sesión recibido: " + status);
+            $("#resultLogin").text(data);
+        });
+    });
 });
