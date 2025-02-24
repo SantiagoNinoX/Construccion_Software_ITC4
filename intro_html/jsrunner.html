@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de JS</title>
+    <script>
+        function fibonacci(){
+            let x = 0;
+            let y = 1;
+            for (let i = 0; i < 20; i++){
+                console.log(y);
+                let tmp = x;
+                x = y;
+                y = tmp + y;
+            }
+        }
+
+        function aureo(){
+            let x = 1;
+            let y = 1;
+            for (let i = 0; i < 20; i ++){
+                console.log(y/x);
+                let temp = x;
+                x = y;
+                y = temp + y;
+            }
+        }
+    
+    </script>
+</head>
+<body>
+    <button type="button" onclick="fibonacci()">Serie de Fibonacci</button>
+    <button type="button" onclick="aureo()">Numero Aureo</button>
+    <button type="button" onclick="arbol()">Arbolito</button>
+</body>
+</html>
