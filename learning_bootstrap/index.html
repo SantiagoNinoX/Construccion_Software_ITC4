@@ -10,14 +10,37 @@
     <script src="/learning_bootstrap/index.js"></script>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">The Cattery</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#descripcion">Descripción</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menú</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gatos">Gatos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#detalles">Detalles</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
     <div class="container-fluid">
         <div class="row p-2">
-            <div class="col-sm-12 mt-4 p-5 bg-primary text-warning text-center rounded">
-                <h1>Cat Cafe: The Cattery</h1>
+            <div class="col-sm-12 bg-primary text-warning text-center rounded p-5">
+                <h1 id="titulo">Cat Cafe: The Cattery</h1>
             </div>
         </div>
         <div class="row p-2">
-            <div class="col-sm-12 text-center bg-info text-white">
+            <div class="col-sm-12 text-center bg-info text-white" id="descripcion">
                 <p>"The Cattery" es un Cat Café; es decir, una cafetería en la que podrás convivir
                 e interactuar con estos divertidos felinos mientras degustas de unos maravillosos platillos. </p>
                 <p> ¡Anímate a vivir la experiencia! Te esperamos pronto. </p>
@@ -25,7 +48,7 @@
             </div>
         </div>
         <div class="row p-2">
-            <div class="col-md-8 text-center bg-warning">
+            <div class="col-md-8 text-center bg-warning" id="menu">
                 <h2>Menú</h2>
                 <form>
                     <legend>¿Qué día nos visitarás?</legend>
@@ -65,12 +88,12 @@
                 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/b871cf23885159.5632a6c404d21.jpg" alt="Nuestro negocio">
             </div>
         </div>
-        <div class="row pt-5 px-5">
+        <div class="row pt-5 px-5" id="gatos">
             <h3>Conoce a nuestros gatos ...</h3>
             <div class="col-sm-6" style="background-color: rgb(0, 76, 255);">
                 <h4>- Nacho</h4>
                 <img id="fotoNacho" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7Rsfl6dIGPbojoNrUPdja0WjgGk8ESACRZg&s" alt="El es Nacho">
-                <button type="button" onclick="infoGatos('nacho')" id="botonNacho">Otra foto de Nacho</button>
+                <button type="button" id="botonNacho">Otra foto de Nacho</button>
             </div>
             <div class="col-sm-6" style="background-color: rgba(0, 255, 255, 0.347);">
                 <p id="infoNacho" style="padding: 4rem; text-align: center;"></p>
@@ -80,7 +103,7 @@
             <div class="col-sm-6 bg-danger">
                 <h4>- Gabo</h4>
                 <img id="fotoGabo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmDZfCnn3LqK46xmjVsuWSy37NTWCJ2znd5Q&s" alt="El es Gabo" id="fotoGabo">
-                <button type="button" onclick="infoGatos('gabo')" id="botonGabo">Otra foto de Gabo</button>
+                <button type="button" id="botonGabo">Otra foto de Gabo</button>
             </div>
             <div class="col-sm-6" style="background-color: rgba(255, 68, 0, 0.399);">
                 <p id="infoGabo" style="padding: 4rem; text-align: center;"></p>
@@ -90,13 +113,13 @@
             <div class="col-sm-6 bg-success">
                 <h4>- Omar</h4>
                 <img id="fotoOmar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJy0fmkDHSWuzpng7qryDCkMAjxpmTUnXPQQ&s" alt="El es Omar" id="fotoOmar">
-                <button type="button" onclick="infoGatos('omar')" id="botonOmar">Otra foto de Omar</button>
+                <button type="button" id="botonOmar">Otra foto de Omar</button>
             </div>
             <div class="col-sm-6" style="background-color: rgba(172, 255, 47, 0.348);">
                 <p id="infoOmar" style="padding: 4rem; text-align: center;"></p>
             </div>
         </div>
-        <div class="row p-2">
+        <div class="row p-2" id="detalles">
             <div class="col-sm-7 bg-secondary text-white">
                 <p>Dirección: Av. de los Insurgentes Sur 1457, Insurgentes Mixcoac, Benito Juárez, 03920 Ciudad de México, CDMX</p>
                 <p><a href="https://maps.app.goo.gl/KweQBSzAviJy3SYz9" target="_blank">Ubicación</a></p>

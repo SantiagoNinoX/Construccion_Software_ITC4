@@ -1,5 +1,11 @@
 $(document).ready(function(){
 
+    function animarTitulo(){
+        $("#titulo").animate({fontSize: "3em"}, 100);
+        $("#titulo").animate({fontSize: "2.9em"}, 100);
+    }
+    setInterval(animarTitulo, 1000);   //animacion c/seg
+
     $("#fotoNacho").dblclick(function(){
         $.get("http://127.0.0.1:5000/info/nacho", function(data){
             $("#infoNacho").hide().text(data.descripcion).fadeIn(200);
@@ -22,13 +28,9 @@ $(document).ready(function(){
         $("#maps").hide();
     });
 
-    // $("#botonSlide").click(function(){
-    //     $("#listaMenu").slideDown();
-    // });
-
     $("#botonSlide").click(function(){
         $.get("http://127.0.0.1:5000/hi", function(data, status){
-            $("#resultadomenu").html(data);
+            $("#resultadomenu").hide().html(data).slideDown();
             alert("Acaba de cargar el menu. Status: " + status);
         });
     });
