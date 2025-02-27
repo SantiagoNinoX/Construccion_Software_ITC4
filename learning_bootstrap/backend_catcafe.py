@@ -21,7 +21,7 @@ def saludo():
 @app.route("/cambiaImagen/<gato>")
 def nuevaImagen(gato):
     imagenes = {
-        "nacho": "https://images.unsplash.com/photo-1606208427954-aa8319c4815e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2F0byUyMGJsYW5jb3xlbnwwfHwwfHx8MA%3D%3D",
+        "nacho": "https://cdn0.expertoanimal.com/es/posts/7/7/4/cuidados_para_un_gato_blanco_22477_orig.jpg",
         "gabo": "https://www.mirringo.com.co/Portals/mirringo/Images/articulos-actualidad-gatuna/5-mitos-sobre-los-gatos-naranjas/gatos-de-color-naranja.png?ver=2024-10-30-115216-760",
         "omar": "https://www.hola.com/horizon/square/7a62013a79a9-por-que-gatos-negros-dan-mala-suerte-t.jpg"
     }

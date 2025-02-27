@@ -1,31 +1,17 @@
 $(document).ready(function(){
 
-    function animarTitulo(){
-        $("#titulo").animate({fontSize: "3em"}, 100);
-        $("#titulo").animate({fontSize: "2.9em"}, 100);
-    }
-    setInterval(animarTitulo, 1000);   //animacion c/seg
+    // function animarTitulo(){
+    //     $("#titulo").animate({fontSize: "3em"}, 100);
+    //     $("#titulo").animate({fontSize: "2.9em"}, 100);
+    // }
+    // setInterval(animarTitulo, 1000);   //animacion c/seg
 
-    $("#fotoNacho").dblclick(function(){
-        $.get("http://127.0.0.1:5000/info/nacho", function(data){
-            $("#infoNacho").hide().text(data.descripcion).fadeIn(200);
+    $(".botonDia").click(function(){     //funcion optimizada para los 3 gatos.
+        let dia = $(this).data("dia");
+        $.get("http://127.0.0.1:5000/menu/" + dia, function(data, status){
+            $("#infomenu").text(data.platillos)
+            alert("Mostrando el menu del: " + dia + ". Status: " + status);
         });
-    });
-
-    $("#fotoGabo").dblclick(function(){
-        $.get("http://127.0.0.1:5000/info/gabo", function(data){
-            $("#infoGabo").hide().text(data.descripcion).fadeIn(200);
-        });
-    });
-
-    $("#fotoOmar").dblclick(function(){
-        $.get("http://127.0.0.1:5000/info/omar", function(data){
-            $("#infoOmar").hide().text(data.descripcion).fadeIn(200);
-        });
-    });
-
-    $("#maps").mouseleave(function(){
-        $("#maps").hide();
     });
 
     $("#botonSlide").click(function(){
@@ -39,73 +25,27 @@ $(document).ready(function(){
         $("#resultadomenu").hide();
     });
 
-    $("#botonNacho").click(function(){
-        $.get("http://127.0.0.1:5000/cambiaImagen/nacho", function(data, status){
-            $("#fotoNacho").attr("src", data.url);
-            $("#fotoNacho").attr("height", 225);
-            $("#fotoNacho").attr("width", 225);
-            alert("Acaba de cambiar la foto de Nacho. Status: " + status);
+    $(".fotoGato").dblclick(function(){     //funcion optimizada para los 3 gatos.
+        let nombre = $(this).data("name");
+        let idP = "#info" + nombre.charAt(0).toUpperCase() + nombre.slice(1);
+        $.get("http://127.0.0.1:5000/info/" + nombre, function(data, status){
+            $(idP).hide().text(data.descripcion).fadeIn(200);
         });
     });
 
-    $("#botonGabo").click(function(){
-        $.get("http://127.0.0.1:5000/cambiaImagen/gabo", function(data, status){
-            $("#fotoGabo").attr("src", data.url);
-            $("#fotoGabo").attr("height", 225);
-            $("#fotoGabo").attr("width", 225);
-            alert("Acaba de cambiar la foto de Gabo. Status: " + status);
+    $(".botonGato").click(function(){     //funcion optimizada para los 3 gatos.
+        let nombre = $(this).data("nombre");
+        let idFoto = "#foto" + nombre.charAt(0).toUpperCase() + nombre.slice(1);
+        $.get("http://127.0.0.1:5000/cambiaImagen/" + nombre, function(data, status){
+            $(idFoto).attr("src", data.url);
+            $(idFoto).attr("height", 225);
+            $(idFoto).attr("width", 225);
+            alert(`Acaba de cambiar la foto de ${nombre}. Status: ${status}`);
         });
     });
 
-    $("#botonOmar").click(function(){
-        $.get("http://127.0.0.1:5000/cambiaImagen/omar", function(data, status){
-            $("#fotoOmar").attr("src", data.url);
-            $("#fotoOmar").attr("height", 225);
-            $("#fotoOmar").attr("width", 225);
-            alert("Acaba de cambiar la foto de Omar. Status: " + status);
-        });
-    });
-
-    $("#botonLunes").click(function(){
-        $.get("http://127.0.0.1:5000/menu/lunes", function(data, status){
-            $("#infomenu").text(data.platillos)
-            alert("Mostrando el menu del lunes. Status: " + status);
-        });
-    });
-
-    $("#botonMartes").click(function(){
-        $.get("http://127.0.0.1:5000/menu/martes", function(data, status){
-            $("#infomenu").text(data.platillos)
-            alert("Mostrando el menu del martes. Status: " + status);
-        });
-    });
-
-    $("#botonMiercoles").click(function(){
-        $.get("http://127.0.0.1:5000/menu/miercoles", function(data, status){
-            $("#infomenu").text(data.platillos)
-            alert("Mostrando el menu del miercoles. Status: " + status);
-        });
-    });
-
-    $("#botonJueves").click(function(){
-        $.get("http://127.0.0.1:5000/menu/jueves", function(data, status){
-            $("#infomenu").text(data.platillos)
-            alert("Mostrando el menu del jueves. Status: " + status);
-        });
-    });
-
-    $("#botonViernes").click(function(){
-        $.get("http://127.0.0.1:5000/menu/viernes", function(data, status){
-            $("#infomenu").text(data.platillos)
-            alert("Mostrando el menu del viernes. Status: " + status);
-        });
-    });
-
-    $("#botonSabado").click(function(){
-        $.get("http://127.0.0.1:5000/menu/sabado", function(data, status){
-            $("#infomenu").text(data.platillos)
-            alert("Mostrando el menu del sabado. Status: " + status);
-        });
+    $("#maps").mouseleave(function(){
+        $("#maps").hide();
     });
 });
 
